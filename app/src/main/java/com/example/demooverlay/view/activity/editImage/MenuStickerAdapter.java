@@ -1,4 +1,4 @@
-package com.example.demooverlay.view.fragment.editImage;
+package com.example.demooverlay.view.activity.editImage;
 
 import android.content.Context;
 import android.content.res.AssetManager;

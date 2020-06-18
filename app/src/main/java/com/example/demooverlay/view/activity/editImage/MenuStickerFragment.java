@@ -1,4 +1,4 @@
-package com.example.demooverlay.view.fragment.editImage;
+package com.example.demooverlay.view.activity.editImage;
 
 import android.os.Bundle;
 
@@ -17,7 +17,6 @@ import com.example.demooverlay.databinding.FragmentMenuStickerBinding;
 public class MenuStickerFragment extends Fragment {
 
     private FragmentMenuStickerBinding fragmentMenuStickerBinding;
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

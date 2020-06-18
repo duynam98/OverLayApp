@@ -1,23 +1,21 @@
 package com.example.demooverlay.view.activity;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.Handler;
-import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.demooverlay.R;
 import com.example.demooverlay.utils.Constant;
+import com.example.demooverlay.view.activity.editImage.EditImageActivity;
 import com.example.demooverlay.view.fragment.home.HomeFragment;
 
 public class SplashActivity extends AppCompatActivity {
 
     private FragmentTransaction fragmentTransaction;
     private HomeFragment homeFragment;
-    private ImageView imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

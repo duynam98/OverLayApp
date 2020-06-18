@@ -18,6 +18,7 @@
             android:id="@+id/img_menu"
             android:layout_width="@dimen/size_24"
             android:layout_height="@dimen/size_32"
+            android:layout_marginTop="@dimen/size_8"
             android:src="@drawable/ic_text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
