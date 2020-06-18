@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Overlay</string>
+    <string name="menu_home_camera">Camera</string>
+    <string name="menu_home_gallery">Gallery</string>
+    <string name="menu_home_store">Store</string>
+    <string name="menu_home_setting">Setting</string>
+    <string name="menu_edit_text">Text</string>
+    <string name="menu_edit_overlay">Overlay</string>
+    <string name="menu_edit_stickers">Stickers</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="percent_max_seekbar">100%</string>
+</resources>
