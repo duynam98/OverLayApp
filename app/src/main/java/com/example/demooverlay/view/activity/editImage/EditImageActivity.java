@@ -1,5 +1,6 @@
 package com.example.demooverlay.view.activity.editImage;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -8,6 +9,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Environment;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 
@@ -72,9 +74,10 @@ public class EditImageActivity extends AppCompatActivity implements MenuAdapter.
                 startActivity(intent);
             }
         });
+        doneAddText();
     }
 
-    private void init(){
+    private void init() {
         mViews = new ArrayList<>();
         addTextMenuFragment = new AddTextMenuFragment();
     }
@@ -166,7 +169,7 @@ public class EditImageActivity extends AppCompatActivity implements MenuAdapter.
 
     public void addTexttoImage() {
         final BubbleTextView bubbleTextView = new BubbleTextView(this,
-                Color.WHITE, 0);
+                Color.RED, 0);
         bubbleTextView.setImageResource(R.mipmap.none_image);
         bubbleTextView.setOperationListener(new BubbleTextView.OperationListener() {
             @Override
@@ -187,11 +190,7 @@ public class EditImageActivity extends AppCompatActivity implements MenuAdapter.
 
             @Override
             public void onClick(BubbleTextView bubbleTextView) {
-//                checkSticker = false;
-//                rclPickFont.setVisibility(View.VISIBLE);
-//                btnEdtText.setVisibility(View.VISIBLE);
-//                txtFont.setVisibility(View.VISIBLE);
-//                bottomSheetDialog.show();
+                activityEditImageBinding.ctlIputEdt.setVisibility(View.VISIBLE);
             }
 
             @Override
@@ -284,6 +283,20 @@ public class EditImageActivity extends AppCompatActivity implements MenuAdapter.
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
+    }
+
+    private void doneAddText() {
+        activityEditImageBinding.imgDoneAddText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (mCurrentEditTextView != null) {
+                    mCurrentEditTextView.setText(activityEditImageBinding.edtAddText.getText().toString());
+                    activityEditImageBinding.ctlIputEdt.setVisibility(View.GONE);
+                    InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+                    imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+                }
+            }
+        });
     }
 
     private void cancelTransparency(final StickerView stickerView) {

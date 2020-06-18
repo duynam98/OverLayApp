@@ -93,7 +93,9 @@ public class HomeFragment extends Fragment implements GetImage.onLoadImage, List
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == PICK_IMAGE){
-            ((SplashActivity) getActivity()).addFragmentEditImage(data.getData().toString());
+            if (data != null){
+                ((SplashActivity) getActivity()).addFragmentEditImage(data.getData().toString());
+            }
         }
     }
 

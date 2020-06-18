@@ -143,6 +143,35 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ctl_iput_edt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/app_name_text"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/edt_addText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size_16"
+                android:layout_marginRight="@dimen/size_16"
+                android:backgroundTint="@color/colorOrange"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/img_doneAddText"
+                android:layout_width="@dimen/size_32"
+                android:layout_height="@dimen/size_32"
+                android:src="@drawable/ic_done"
+                app:layout_constraintEnd_toEndOf="@id/edt_addText"
+                app:layout_constraintTop_toBottomOf="@id/edt_addText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>

@@ -30,7 +30,6 @@ import com.example.demooverlay.utils.DensityUtils;
 public class BubbleTextView extends ImageView {
     private static final String TAG = "BubbleTextView";
 
-
     private Bitmap deleteBitmap;
     private Bitmap flipVBitmap;
     private Bitmap topBitmap;
@@ -195,8 +194,6 @@ public class BubbleTextView extends ImageView {
     @Override
     protected void onDraw(Canvas canvas) {
         if (mBitmap != null) {
-
-
             float[] arrayOfFloat = new float[9];
             matrix.getValues(arrayOfFloat);
             float f1 = 0.0F * arrayOfFloat[0] + 0.0F * arrayOfFloat[1] + arrayOfFloat[2];
@@ -271,8 +268,8 @@ public class BubbleTextView extends ImageView {
 
                 canvas.drawBitmap(deleteBitmap, null, dst_delete, null);
                 canvas.drawBitmap(resizeBitmap, null, dst_resize, null);
-//                canvas.drawBitmap(flipVBitmap, null, dst_flipV, null);
-                canvas.drawBitmap(topBitmap, null, dst_top, null);
+                canvas.drawBitmap(flipVBitmap, null, dst_flipV, null);
+                //canvas.drawBitmap(topBitmap, null, dst_top, null);
             }
 
             canvas.restore();
@@ -302,7 +299,7 @@ public class BubbleTextView extends ImageView {
 
     public void setImageResource(int resId, BubblePropertyModel model) {
         matrix.reset();
-        setBitmap(BitmapFactory.decodeResource(getResources(), resId), model);
+        //setBitmap(BitmapFactory.decodeResource(getResources(), resId), model);
     }
 
     public void setBitmap(Bitmap bitmap, BubblePropertyModel model) {
@@ -383,8 +380,8 @@ public class BubbleTextView extends ImageView {
         flipVBitmapWidth = (int) (flipVBitmap.getWidth() * BITMAP_SCALE);
         flipVBitmapHeight = (int) (flipVBitmap.getHeight() * BITMAP_SCALE);
 
-        topBitmapWidth = (int) (topBitmap.getWidth() * BITMAP_SCALE);
-        topBitmapHeight = (int) (topBitmap.getHeight() * BITMAP_SCALE);
+        //topBitmapWidth = (int) (topBitmap.getWidth() * BITMAP_SCALE);
+        //topBitmapHeight = (int) (topBitmap.getHeight() * BITMAP_SCALE);
 
     }
 
